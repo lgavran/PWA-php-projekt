@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unos vijesti</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">Warhammer News</div>
+
+        <nav>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="kategorija.php?kategorija=News">News</a></li>
+        <li><a href="kategorija.php?kategorija=Tournaments">Tournaments</a></li>
+        <li><a href="unos.html">Unos</a></li>
+        <li><a href="administrator.php">Administracija</a></li>
+        <li><a href="registracija.php">Registracija</a></li>
+    </ul>
+</nav>
+    </div>
+</header>
+
+<main class="container form-page">
+
+    <h1>Unos vijesti</h1>
+
+    <form name="unosVijesti" action="skripta.php" method="POST" enctype="multipart/form-data">
+
+        <div class="form-item">
+            <label for="title">Naslov vijesti</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+
+        <div class="form-item">
+            <label for="about">Kratki sažetak vijesti</label>
+            <textarea id="about" name="about" rows="5" required></textarea>
+        </div>
+
+        <div class="form-item">
+            <label for="content">Tekst vijesti</label>
+            <textarea id="content" name="content" rows="10" required></textarea>
+        </div>
+
+        <div class="form-item">
+            <label for="category">Kategorija vijesti</label>
+            <select id="category" name="category" required>
+                <option value="News">News</option>
+                <option value="Tournaments">Tournaments</option>
+            </select>
+        </div>
+
+        <div class="form-item">
+            <label for="photo">Slika</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+        </div>
+
+        <div class="form-item checkbox-item">
+            <label>
+                <input type="checkbox" name="archive">
+                Spremiti u arhivu
+            </label>
+        </div>
+
+        <div class="form-buttons">
+            <button type="reset">Poništi</button>
+            <button type="submit">Prihvati</button>
+        </div>
+
+    </form>
+
+</main>
+
+<footer>
+    <div class="container">
+        Copyright © 2026 | Luka Gavran | luka.gavran@gmail.com
+    </div>
+</footer>
+
+</body>
+</html>
