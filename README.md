@@ -6,3 +6,4 @@ Upute:
 5. Importaj projekt/projekt.sql.
 6. Pokreni:
 http://localhost/projekt/index.php
+7. admin user i pass: admin admin
